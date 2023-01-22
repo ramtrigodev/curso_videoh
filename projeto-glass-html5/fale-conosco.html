@@ -12,6 +12,7 @@
 </head>
 
 <script type="text/javascript" src="_javascript/funcoes.js"></script>
+
 <body>
     <div id="interface">
 
@@ -35,72 +36,102 @@
 
                 <ul>
                     <!-- Itens da lista  -->
-                    <li onmouseover="mudafoto('_imagens/home.png')" onmouseout="mudafoto('_imagens/contato.png')"><a href="index.html">Home</a></li>
-                    <li onmouseover="mudafoto('_imagens/especificacoes.png')" onmouseout="mudafoto('_imagens/contato.png')"><a href="specs.html"> Especificações </a></li>
-                    <li onmouseover="mudafoto('_imagens/fotos.png')" onmouseout="mudafoto('_imagens/contato.png')"><a href="fotos.html"> Fotos</a> </li>
-                    <li onmouseover="mudafoto('_imagens/multimidia.png')" onmouseout="mudafoto('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
-                    <li onmouseover="mudafoto('_imagens/contato.png')" onmouseout="mudafoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a> </li>
+                    <li onmouseover="mudafoto('_imagens/home.png')" onmouseout="mudafoto('_imagens/contato.png')"><a
+                            href="index.html">Home</a></li>
+                    <li onmouseover="mudafoto('_imagens/especificacoes.png')"
+                        onmouseout="mudafoto('_imagens/contato.png')"><a href="specs.html"> Especificações </a></li>
+                    <li onmouseover="mudafoto('_imagens/fotos.png')" onmouseout="mudafoto('_imagens/contato.png')"><a
+                            href="fotos.html"> Fotos</a> </li>
+                    <li onmouseover="mudafoto('_imagens/multimidia.png')" onmouseout="mudafoto('_imagens/contato.png')">
+                        <a href="multimidia.html">Multimídia</a>
+                    </li>
+                    <li onmouseover="mudafoto('_imagens/contato.png')" onmouseout="mudafoto('_imagens/contato.png')"><a
+                            href="fale-conosco.html">Fale conosco</a> </li>
 
                 </ul>
             </nav>
         </header>
 
+        <section id="corpo-full">
+            <article id="noticia-principal">
+                <header id="cabecalho-artigo">
+                    <hgroup>
+                        <h3>Fale Conosco> Contato</h3>
+                        <h1>Formulário de COntato</h1>
+                    </hgroup>
+                </header>
+            </article>
+        </section>
 
+        <form method="post" id="fContato" action="mailto:" contato@contato.com.br>
+            <fieldset id="usuario">
+                <legend>Identificação do Usuário </legend>
+                <p><label for="cNome">Nome: </label> <input type="text" name="tNome" id="cNome" size="20" maxlength="30"
+                        placeholder="Nome Completo" /> </p>
+                <p><label for="cSenha"></label> Senha: <input type="password" name="tSenha" id="cSenha" size="8"
+                        maxlength="8" placeholder="8 Digitos" /></p>
+                <p><label for="cMail"></label> E-mail: <input type="email" name="tMail" id="cMail" size="20"
+                        maxlength="48"></p>
+                <fieldset id="sexo">
+                    <legend> Sexo: </legend>
+                    <label for="cMasc"> <input type="radio" name="tSexo" id="cMasc" /> <label for="cMasc"> Masculino
+                        </label><br />
+                        <label for="cFem"> <input type="radio" name="tSexo" id="cFem" /> <label for="cFem"> Feminino
+                            </label>
+                </fieldset>
+                <p> <label for="cNasc"></label>Data de Nascimento: <input type="date" name="tNasc" id="cNasc" /></p>
+            </fieldset>
+            <fieldset id="endereco">
+                <legend> Endereço do Usuário </legend>
+                <p> Logradouro <label for="cRua"></label><input type="text" name="tRua" id="cRua" size="13"
+                        maxlength="80" placeholder="Rua, Av, Trav" /></p>
+                <p>Número:<label for="cNum"></label><input type="number" name="tNum" id="cNum" min="0" max="99999" />
+                </p>
+                <p>Estado:<label for="cEst"></label>
+                    <select name="tEst" id="cEst">
+                        <optgroup label="Região Sudeste">
+                            <option value="SP" selected>São Paulo</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="MJ">Minas Gerais</option>
+                            <option value="ES">Espirito Santo</option>
+                        </optgroup>
 
+                    </select>
+                </p>
 
+                <p>Cidade:<label for="cCidade"></label><input type="text" name="tCid" id="cCid" maxlength="40" size="20"
+                        list="cidades" /></p>
+                <datalist id="cidades">
+                    <option value="Juquiá"></option>
+                    <option value="Registro"></option>
+                    <option value="Miracatu"></option>
+                </datalist>
+            </fieldset>
 
-Google Glass
-A revolução do Google está chegando
+            <fieldset id="mensagem">
+                <legend> Mensagem do Usuário </legend>
+                <p><label for="cUrg"></label>Grau de Urgência: Min
+                <input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2"/> Max</p>
+                <p> <label for="cMsg">Mensagem:</label>
+                <textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixei aqui a sua mensagem"></textarea></p>
+            </fieldset>
 
-[AQUI ENTRA UMA FOTO]
+            <fieldset id="pedido">
+                <legend>Quero um Google Glass </legend>
+                <p> <label for="cEst"></label> Gostaria de adquirir um Google Glass quando disponível</p>
+                <p> <label for="cEst"></label> Cor: </p>
+                <p><label for="cEst"></label> Quantidade:</p>
+                <p> <label for="cEst"></label> Preço Total: R$</p>
+            </fieldset>
 
-Menu Principal
-- Home
-- Especificações
-- Fotos
-- Multimídia
-- Fale conosco
+            [BOTÃO ENVIAR]
 
-Fale Conosco > Contato
-Formulário de Contato
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
+        </form>
 
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
-
-Endereço do Usuário
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
-
-Mensagem do Usuário
-    Grau de Urgência:
-    Mensagem:
-
-Quero um Google Glass
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
-
-
-[BOTÃO ENVIAR]
-
-Copyright 2013 - by Gustavo Guanabara
-Facebook | Twitter
-
-<footer id="rodape">
-    <p>&copy;Copyright 2023 - by Ramon Trigo </p>
-</footer>
-</div>
+        <footer id="rodape">
+            <p>&copy;Copyright 2023 - by Ramon Trigo </p>
+        </footer>
+    </div>
 </body>
 
 </html>
