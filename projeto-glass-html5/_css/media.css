@@ -22,3 +22,18 @@ video#filme{
     top: 85px;
     width: 440px;
 }
+div#video_adicional {
+    position: relative;
+    border: 8px solid white;
+    box-shadow: 1px 1px 4px black;
+   
+
+}
+
+div#video_adicional  video{
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+
+}
